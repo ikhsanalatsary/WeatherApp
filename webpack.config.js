@@ -15,6 +15,8 @@ module.exports = {
       Main: 'app/components/Main.js',
       Nav: 'app/components/Nav.js',
       Weather: 'app/components/Weather.js',
+      WeatherForm: 'app/components/WeatherForm.js',
+      WeatherInfo: 'app/components/WeatherInfo.js',
     },
     extentions: ['', '.js', '.jsx']
   },
