@@ -1,6 +1,10 @@
 import React from 'react';
+import swal from 'sweetalert';
 import WeatherForm from 'WeatherForm';
 import WeatherInfo from 'WeatherInfo';
+import weatherMap from 'weatherMap';
+
+const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
 
 class Weather extends React.Component {
   constructor(props) {
@@ -14,11 +18,18 @@ class Weather extends React.Component {
   }
 
   handleSearch(city) {
-    console.log(city);
-    this.setState({
-      city,
-      temp: 24,
-    })
+    city = capitalize(city);
+    weatherMap
+      .getTemp(city)
+      .then(temp => {
+        console.log(temp);
+        this.setState({
+          city,
+          temp,
+        });
+      }, (error) => {
+        swal("Oops...", error, "error");
+      });
   }
 
   render() {

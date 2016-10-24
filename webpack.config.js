@@ -14,6 +14,7 @@ module.exports = {
       LinkContainer: 'app/components/LinkContainer.js',
       Main: 'app/components/Main.js',
       Nav: 'app/components/Nav.js',
+      weatherMap: 'app/api/weatherMap.js',
       Weather: 'app/components/Weather.js',
       WeatherForm: 'app/components/WeatherForm.js',
       WeatherInfo: 'app/components/WeatherInfo.js',
