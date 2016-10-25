@@ -11,6 +11,7 @@ module.exports = {
     alias: {
       About: 'app/components/About.js',
       Examples: 'app/components/Examples.js',
+      LazyLoading: 'app/components/LazyLoading.js',
       LinkContainer: 'app/components/LinkContainer.js',
       Main: 'app/components/Main.js',
       Nav: 'app/components/Nav.js',
