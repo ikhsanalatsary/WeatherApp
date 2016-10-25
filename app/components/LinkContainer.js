@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link, IndexLink } from 'react-router';
 
-class LinkContainer extends React.Component {
-  render() {
-    const { children, to, onlyActiveOnIndex } = this.props;
-    const isActive = this.context.router.isActive(to, onlyActiveOnIndex);
-    const LinkComponent = onlyActiveOnIndex ? IndexLink : Link;
-    const className = isActive ? 'active' : '';
+const LinkContainer = ({ children, to, onlyActiveOnIndex }, { router }) => {
+  const isActive = router.isActive(to, onlyActiveOnIndex);
+  const LinkComponent = onlyActiveOnIndex ? IndexLink : Link;
+  const className = isActive ? 'active' : '';
 
-    return (
-      <li className={className}>
-        <LinkComponent to={to}>{children}</LinkComponent>
-      </li>
-    );
-  }
+  return (
+    <li className={className}>
+      <LinkComponent to={to}>{children}</LinkComponent>
+    </li>
+  );
 }
 
 LinkContainer.propTypes = {

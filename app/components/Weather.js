@@ -2,7 +2,7 @@ import React from 'react';
 import swal from 'sweetalert';
 import WeatherForm from 'WeatherForm';
 import WeatherInfo from 'WeatherInfo';
-import weatherMap from 'weatherMap';
+import * as weatherMap from 'weatherMap';
 
 const capitalize = ([first,...rest]) => first.toUpperCase() + rest.join('').toLowerCase();
 
