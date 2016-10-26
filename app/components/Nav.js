@@ -14,7 +14,7 @@ const Nav = () => {
           </button>
           <a className="navbar-brand" href="#/">Weather App</a>
         </div>
-        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div className="">
           <ul className="nav navbar-nav">
             <LinkContainer to="/" onlyActiveOnIndex>Get Weather</LinkContainer>
             <LinkContainer to="/about">About</LinkContainer>
